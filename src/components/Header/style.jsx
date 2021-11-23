@@ -20,7 +20,6 @@ const SHeader = styled.header`
     flex-direction: column;
     text-align: center;
     width: 12vw;
-    border: green 2px solid;
     margin: 10px 10px 0 0;
   }
 
