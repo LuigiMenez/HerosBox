@@ -1,8 +1,9 @@
 import rpgs from '../../db';
+import Container from './style';
 
 export default function SelectGame() {
   return (
-    <selection>
+    <Container>
       <h2>Les univers</h2>
       <div>
         {rpgs.map((rpg) => {
@@ -14,6 +15,6 @@ export default function SelectGame() {
           );
         })}
       </div>
-    </selection>
+    </Container>
   );
 }
