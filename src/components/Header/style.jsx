@@ -20,18 +20,21 @@ const SHeader = styled.header`
     flex-direction: column;
     text-align: center;
     width: 12vw;
-    margin: 10px 10px 0 0;
+    margin: 25px 30px 0 0;
   }
 
   button {
     background: #d5d5d5;
     color: #1f1d36;
-    height: 30px;
+    height: 33px;
     border-radius: 15px;
+    font-size: 18px;
   }
 
   a {
     color: #d5d5d5;
+    padding-top: 10px;
+    font-size: 18px;
   }
 `;
 
