@@ -1,4 +1,4 @@
-const rpg = [
+const rpgs = [
   {
     title: `Donjon & dragon`,
     imgTitle: `https://i.ibb.co/tMFjS0S/d-d-titles.png`,
@@ -31,4 +31,4 @@ const rpg = [
   },
 ];
 
-export default rpg;
+export default rpgs;
