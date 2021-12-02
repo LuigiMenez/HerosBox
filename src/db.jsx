@@ -20,12 +20,12 @@ const rpgs = [
     img: `https://i.ibb.co/r6CZ361/star-wars.jpg`,
   },
   {
-    title: `Vampire la mascarade`,
+    title: `Vampire: la mascarade`,
     imgTitle: `https://i.ibb.co/vLSpsZz/vampire-title.png`,
     img: `https://i.ibb.co/K7QhKpP/vampire.jpg`,
   },
   {
-    title: `Les terre d'Arran`,
+    title: `Les terres d'Arran`,
     imgTitle: `https://i.ibb.co/fxBHbvx/terre-d-arran-title.png`,
     img: `https://i.ibb.co/xGRt4gD/terre-d-arran.jpg`,
   },

@@ -1,17 +1,16 @@
 import rpgs from '../../db';
-import Container from './style';
+import { Container, Game } from './style';
 
 export default function SelectGame() {
   return (
     <Container>
       <h2>Les univers</h2>
-      <div>
+      <div className="games">
         {rpgs.map((rpg) => {
           return (
-            <div>
-              <img src={rpg.img} alt={rpg.title} />
-              <img src={rpg.imgTitle} alt={rpg.title} />
-            </div>
+            <Game img={rpg.img} alt={rpg.title}>
+              <p>{rpg.title}</p>
+            </Game>
           );
         })}
       </div>
