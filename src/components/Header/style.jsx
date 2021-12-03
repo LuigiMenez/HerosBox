@@ -1,40 +1,36 @@
 import styled from 'styled-components';
 
 const SHeader = styled.header`
-  display: flex;
-  justify-content: flex-end;
   background-color: #1f1d36;
-  height: 30vh;
+  height: 18vh;
+  width: 100vw;
 
   h1 {
-    justify-content: flex-start;
-    width: 100%;
-    margin-top: 9.5vh;
+    width: 100vw;
     color: #d5d5d5;
-    font-size: 64px;
-    margin-left: 30px;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    margin-top: 22px;
   }
 
   div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 12vw;
-    margin: 25px 30px 0 0;
+    display: inline;
   }
 
   button {
     background: #d5d5d5;
     color: #1f1d36;
-    height: 33px;
+    height: 25px;
     border-radius: 15px;
-    font-size: 18px;
+    font-size: 16px;
+    margin: 10px 10px 0 10px;
   }
 
   a {
     color: #d5d5d5;
     padding-top: 10px;
-    font-size: 18px;
+    font-size: 15px;
   }
 `;
 
