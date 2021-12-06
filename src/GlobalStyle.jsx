@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
 }
   body {
     background: #d5d5d5;
-    width: 100vh;
+    width: 100vw;
     
   }
   h1{

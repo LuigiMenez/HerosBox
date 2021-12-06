@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #d5d5d5;
   width: 100vw;
 
   h2 {
@@ -36,10 +35,11 @@ export const Game = styled.div`
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 14vh;
+  transition: transform 1s;
+  :hover {
+    transform: scale(1.1);
+  }
   p {
-    /* display: flex;
-    justify-content: flex-end;
-    flex-direction: column; */
     text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
