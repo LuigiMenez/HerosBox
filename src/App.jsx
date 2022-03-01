@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import SelectGame from './components/SelectGame';
 import CharacterChoice from './components/CharacterChoice';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -9,8 +10,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<SelectGame />} />
-        <Route path="/games/name" element={<CharacterChoice />} />
+        <Route path="/games/:Name" element={<CharacterChoice />} />
       </Routes>
+      <Footer />
     </>
   );
 }
