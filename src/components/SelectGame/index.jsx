@@ -1,5 +1,7 @@
 import rpgs from '../../db';
+// import { Link } from 'react-router-dom';
 import { Container, Game } from './style';
+// import CharacterChoice from './components/CharacterChoice';
 
 export default function SelectGame() {
   return (
