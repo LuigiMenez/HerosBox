@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<SelectGame />} />
-        <Route path="/games/:Name" element={<CharacterChoice />} />
+        <Route path="/games/:id" element={<CharacterChoice />} />
       </Routes>
       <Footer />
     </>
