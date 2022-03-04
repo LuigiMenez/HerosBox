@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Game } from './style';
 
 export default function SelectGame() {
@@ -15,13 +16,13 @@ export default function SelectGame() {
     <Container>
       <h2>Les univers</h2>
       <div className="games">
-        {jdrs.map((rpg) => {
-          return (
+        {jdrs.map((rpg) => (
+          <Link key={rpg.id} className="link" to={`/games/${rpg.name}`}>
             <Game key={rpg.id} img={rpg.image} alt={rpg.name}>
               <p>{rpg.name}</p>
             </Game>
-          );
-        })}
+          </Link>
+        ))}
       </div>
     </Container>
   );

@@ -11,6 +11,14 @@ export const Container = styled.div`
     margin-top: 15px;
     margin-bottom: 15px;
   }
+  div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    text-decoration: none;
+  }
 
   .games {
     display: flex;
@@ -40,11 +48,17 @@ export const Game = styled.div`
     transform: scale(1.1);
   }
   p {
+    position: relative;
+    top: 81%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
     width: 100%;
-    grid-area: 2 / 1 / 3 / 2;
+    height: 20%;
+    grid-area: 2 / 2/ 3 / 2;
     background-color: #1f1d359c;
     color: #d5d5d5;
     padding-top: 5px;
