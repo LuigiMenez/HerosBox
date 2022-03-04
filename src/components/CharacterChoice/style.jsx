@@ -4,11 +4,11 @@ const SCharacterChoice = styled.section`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100vw;
-  height: 82vh;
+  height: 60vh;
 
   div {
     margin-top: 10px;
+    height: 50vh;
   }
 
   img {
@@ -19,6 +19,7 @@ const SCharacterChoice = styled.section`
   }
 
   h2 {
+    width: 100%;
     text-align: center;
     font-size: 30px;
     color: #1f1d35;
