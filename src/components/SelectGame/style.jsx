@@ -7,7 +7,7 @@ export const Container = styled.div`
     font-size: 38px;
     text-align: center;
     font-weight: bold;
-    color: #1f1d36;
+    color: var(--main-color);
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -32,7 +32,7 @@ export const Game = styled.div`
   background-repeat: no-repeat;
   width: 22rem;
   height: 23vh;
-  border: solid 4px #1f1d36;
+  border: solid 4px var(--main-color);
   border-radius: 15px;
   margin: auto;
   margin-top: 10px;
@@ -60,7 +60,7 @@ export const Game = styled.div`
     height: 20%;
     grid-area: 2 / 2/ 3 / 2;
     background-color: #1f1d359c;
-    color: #d5d5d5;
+    color: var(--second-color);
     padding-top: 5px;
   }
 `;
