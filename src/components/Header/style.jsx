@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const SHeader = styled.header`
-  background-color: #1f1d36;
+  background-color: var(--main-color);
   height: 18vh;
   width: 100vw;
 
   h1 {
     width: 100vw;
-    color: #d5d5d5;
+    color: var(--second-color);
     text-align: center;
     font-size: 42px;
     font-weight: bold;
@@ -19,8 +19,8 @@ const SHeader = styled.header`
   }
 
   button {
-    background: #d5d5d5;
-    color: #1f1d36;
+    background: var(--second-color);
+    color: var(--main-color);
     height: 25px;
     border-radius: 15px;
     font-size: 16px;
@@ -28,7 +28,7 @@ const SHeader = styled.header`
   }
 
   a {
-    color: #d5d5d5;
+    color: var(--second-color);
     padding-top: 10px;
     font-size: 15px;
   }

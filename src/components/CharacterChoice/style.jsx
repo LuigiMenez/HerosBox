@@ -12,7 +12,7 @@ const SCharacterChoice = styled.section`
   }
 
   img {
-    border: solid #1f1d35 4px;
+    border: solid var(--main-color) 4px;
     border-radius: 15px;
     height: 32vh;
     background-color: #1f1d35bd;
@@ -22,7 +22,7 @@ const SCharacterChoice = styled.section`
     width: 100%;
     text-align: center;
     font-size: 30px;
-    color: #1f1d35;
+    color: var(--main-color);
   }
 
   @media only screen and (min-width: 500px) {
