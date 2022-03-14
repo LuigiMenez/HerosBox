@@ -1,24 +1,23 @@
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import SModal from './style';
 
-const Modal = ({ isShowing, hide, title }) =>
+const Modal = ({ isShowing, hide, title, ...props }) =>
   isShowing &&
   ReactDOM.createPortal(
-    <>
-      <div className="modalOverlay">
-        <div className="modalWrapper">
-          <div className="modal">
-            <div className="modalHeader">
-              <h4>{title}</h4>
-              <button type="button" className="modalCloseButton" onClick={hide}>
-                <span>&times;</span>
-              </button>
-            </div>
-            <div className="modalBody">{title}</div>
+    <SModal className="modalOverlay">
+      <div className="modalWrapper">
+        <div className="modal">
+          <div className="modalHeader">
+            <h4>{title}</h4>
+            <button type="button" className="modalCloseButton" onClick={hide}>
+              <span>&times;</span>
+            </button>
           </div>
+          <div className="modalBody">{props.children}</div>
         </div>
       </div>
-    </>,
+    </SModal>,
     document.body
   );
 
