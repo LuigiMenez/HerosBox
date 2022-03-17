@@ -17,7 +17,7 @@ export default function SelectGame() {
       <h2>Les univers</h2>
       <div className="games">
         {jdrs.map((rpg) => (
-          <Link key={rpg.id} className="link" to={`/games/${rpg.name}`}>
+          <Link key={rpg.id} className="link" to={`/${rpg.name}`}>
             <Game key={rpg.id} img={rpg.image} alt={rpg.name}>
               <p>{rpg.name}</p>
             </Game>
