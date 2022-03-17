@@ -1,10 +1,28 @@
+import axios from 'axios';
 import useModal from 'hooks/useModal';
+import { useState } from 'react';
 import Modal from '../Modal';
 
 export default function Button() {
   const { isShowing: isLoginForm, toggle: toggleLogin } = useModal();
   const { isShowing: isSignUp, toggle: toggleSignUp } = useModal();
 
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+    userName: '',
+  });
+
+  const changeForm = (evt) => {
+    const newData = { ...form };
+    newData[evt.target.name] = evt.target.value;
+    setForm(newData);
+  };
+  const hSubmit = (evt) => {
+    evt.preventDefault();
+    console.log(form);
+    axios.post('http://localhost:5050/auth/signup', form);
+  };
   return (
     <>
       <div className="button">
@@ -16,15 +34,33 @@ export default function Button() {
         </button>
       </div>
       <Modal isShowing={isSignUp} hide={toggleSignUp} title="Inscrivez Vous">
-        <form>
+        <form onSubmit={hSubmit}>
           <div className="form-group">
-            <input type="text" placeholder="Email Address" />
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              placeholder="Email Address"
+              onChange={changeForm}
+            />
           </div>
           <div className="form-group">
-            <input type="text" placeholder="Username" />
+            <input
+              type="text"
+              name="userName"
+              value={form.userName}
+              placeholder="Username"
+              onChange={changeForm}
+            />
           </div>
           <div className="form-group">
-            <input type="text" placeholder="Password" />
+            <input
+              type="password"
+              name="password"
+              value={form.password}
+              placeholder="Password"
+              onChange={changeForm}
+            />
           </div>
           <div className="form-group">
             <input type="submit" value="Register" />
@@ -37,7 +73,7 @@ export default function Button() {
             <input type="text" placeholder="Username" />
           </div>
           <div className="form-group">
-            <input type="text" placeholder="Password" />
+            <input type="text" value={form.password} placeholder="Password" />
           </div>
           <div className="form-group">
             <input type="submit" value="Register" />
