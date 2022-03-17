@@ -8,7 +8,7 @@ const SFooter = styled.footer`
   padding: 15px;
   width: 100vw;
   @media screen and (min-width: 1024px) {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
   }
 `;
