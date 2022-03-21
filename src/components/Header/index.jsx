@@ -1,11 +1,13 @@
-import ButtonLoginSignUp from '../ButtonLoginSignUP';
+import ButtonSignUp from '../ButtonLoginSignUP/signup';
+import ButtonLogin from '../ButtonLoginSignUP/login';
 import SHeader from './style';
 
 export default function Header() {
   return (
     <SHeader>
       <>
-        <ButtonLoginSignUp />
+        <ButtonSignUp />
+        <ButtonLogin />
         <h1> La boite à perso !</h1>
       </>
     </SHeader>
