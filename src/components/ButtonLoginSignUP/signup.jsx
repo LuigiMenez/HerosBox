@@ -1,10 +1,10 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import useModal from 'hooks/useModal';
 import { useState } from 'react';
 import Modal from '../Modal';
 
-export default function Button() {
-  const { isShowing: isLoginForm, toggle: toggleLogin } = useModal();
+export default function ButtonSignUp() {
   const { isShowing: isSignUp, toggle: toggleSignUp } = useModal();
 
   const [form, setForm] = useState({
@@ -20,17 +20,20 @@ export default function Button() {
   };
   const hSubmit = (evt) => {
     evt.preventDefault();
-    console.log(form);
-    axios.post('http://localhost:5050/auth/signup', form);
+    axios
+      .post('http://localhost:5050/auth/signup', form)
+      .then(() => {
+        toast.success('🎲 Réussite critique!');
+      })
+      .catch(() => {
+        toast.error('🎲 Echec critique !');
+      });
   };
   return (
     <>
       <div className="button">
         <button type="button" className="signUp" onClick={toggleSignUp}>
           Inscrivez vous
-        </button>
-        <button type="button" className="logIn" onClick={toggleLogin}>
-          Connexion
         </button>
       </div>
       <Modal isShowing={isSignUp} hide={toggleSignUp} title="Inscrivez Vous">
@@ -61,19 +64,6 @@ export default function Button() {
               placeholder="Password"
               onChange={changeForm}
             />
-          </div>
-          <div className="form-group">
-            <input type="submit" value="Register" />
-          </div>
-        </form>
-      </Modal>
-      <Modal isShowing={isLoginForm} hide={toggleLogin} title="Connexion">
-        <form>
-          <div className="form-group">
-            <input type="text" placeholder="Username" />
-          </div>
-          <div className="form-group">
-            <input type="text" value={form.password} placeholder="Password" />
           </div>
           <div className="form-group">
             <input type="submit" value="Register" />
