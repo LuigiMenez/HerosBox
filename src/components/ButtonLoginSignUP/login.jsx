@@ -56,7 +56,7 @@ export default function ButtonLogin() {
             />
           </div>
           <div className="form-group">
-            <input type="submit" value="Register" />
+            <input type="submit" value="Log in" />
           </div>
         </form>
       </Modal>
