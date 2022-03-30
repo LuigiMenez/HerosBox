@@ -1,10 +1,13 @@
+import { useSelector } from 'react-redux';
+
 export default function User() {
+  const { user } = useSelector((state) => state);
   return (
     <>
-      <p>id:---</p>
-      <p>Email: ---</p>
-      <p>UserName: ---</p>
-      <p>Pass: ---</p>
+      <p>id: {user.id || '---'}</p>
+      <p>Email: {user.mail || '---'}</p>
+      <p>UserName: {user.login || '---'}</p>
+      <p>Pass: {user.password || '---'}</p>
     </>
   );
 }

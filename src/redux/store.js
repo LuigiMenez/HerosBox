@@ -1,16 +1,20 @@
 import { createStore } from 'redux';
 
 const initialState = {
-  id: null,
-  email: null,
-  password: null,
-  userName: null,
+  user: {
+    id: null,
+    email: null,
+    password: null,
+    userName: null,
+  },
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'LOGOUT':
       return initialState;
+    case 'LOGIN':
+      return { ...state, user: { ...action.payload } };
     default:
       return state;
   }
