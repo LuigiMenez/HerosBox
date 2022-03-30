@@ -2,6 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import useModal from 'hooks/useModal';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Modal from '../Modal';
 
 export default function ButtonLogin() {
@@ -11,6 +12,7 @@ export default function ButtonLogin() {
     userName: '',
     password: '',
   });
+  const dispatch = useDispatch();
 
   const changeLog = (evt) => {
     const newData = { ...log };
@@ -21,7 +23,12 @@ export default function ButtonLogin() {
     evt.preventDefault();
     axios
       .post('http://localhost:5050/auth/login', log)
-      .then(() => {
+      .then(({ data }) => {
+        console.log(data);
+        dispatch({
+          type: 'LOGIN',
+          payload: data,
+        });
         toast.success('🎲 Réussite critique!');
       })
       .catch(() => {

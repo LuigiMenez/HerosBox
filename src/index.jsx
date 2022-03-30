@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { Reset } from 'styled-reset';
 import GlobalStyle from './GlobalStyle';
-// eslint-disable-next-line import/no-named-as-default
 import store from './redux/store';
 import App from './App';
 
