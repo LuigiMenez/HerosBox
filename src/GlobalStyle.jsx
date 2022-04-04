@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
 :root{
-  --main-color: #1f1d36;
+  --main-color: #500510;
   --second-color: #d5d5d5;
 }
 *{
@@ -12,10 +12,6 @@ const GlobalStyle = createGlobalStyle`
 }
   body {
     background: #d5d5d5;
-    ${'' /* width: 100vw; */}
-    
-  }
-  h1{
     
   }
 `;

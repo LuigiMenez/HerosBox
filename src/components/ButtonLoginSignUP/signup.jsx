@@ -2,6 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import useModal from 'hooks/useModal';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Modal from '../Modal';
 
 export default function ButtonSignUp() {
@@ -12,6 +13,7 @@ export default function ButtonSignUp() {
     password: '',
     userName: '',
   });
+  const dispatch = useDispatch();
 
   const changeForm = (evt) => {
     const newData = { ...form };
@@ -22,7 +24,11 @@ export default function ButtonSignUp() {
     evt.preventDefault();
     axios
       .post('http://localhost:5050/auth/signup', form)
-      .then(() => {
+      .then(({ data }) => {
+        dispatch({
+          type: 'LOGIN',
+          payload: data,
+        });
         toast.success('🎲 Réussite critique!');
       })
       .catch(() => {
