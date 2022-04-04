@@ -1,36 +1,25 @@
 import styled from 'styled-components';
 
 const SHeader = styled.header`
-  background-color: var(--main-color);
   height: 18vh;
-  width: 100vw;
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
 
   h1 {
-    width: 100vw;
-    color: var(--second-color);
+    color: var(--main-color);
     text-align: center;
     font-size: 42px;
     font-weight: bold;
     margin-top: 22px;
   }
 
-  div {
-    display: inline;
-  }
-
-  button {
-    background: var(--second-color);
-    color: var(--main-color);
+  .auth {
     height: 25px;
     border-radius: 15px;
     font-size: 16px;
-    margin: 10px 10px 0 10px;
-  }
-
-  a {
-    color: var(--second-color);
-    padding-top: 10px;
-    font-size: 15px;
+    /* margin: 10px 10px 0 10px; */
   }
 `;
 

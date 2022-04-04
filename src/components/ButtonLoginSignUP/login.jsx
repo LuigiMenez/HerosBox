@@ -24,7 +24,6 @@ export default function ButtonLogin() {
     axios
       .post('http://localhost:5050/auth/login', log)
       .then(({ data }) => {
-        console.log(data);
         dispatch({
           type: 'LOGIN',
           payload: data,

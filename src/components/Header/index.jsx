@@ -6,12 +6,12 @@ import SHeader from './style';
 export default function Header() {
   return (
     <SHeader>
-      <>
+      <h1>HerosBOX</h1>
+      <div className="auth">
         <ButtonSignUp />
         <ButtonLogin />
         <User />
-        <h1> La boite à perso !</h1>
-      </>
+      </div>
     </SHeader>
   );
 }
