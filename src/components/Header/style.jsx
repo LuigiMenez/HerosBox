@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const SHeader = styled.header`
   height: 18vh;
+  width: 70vw;
   background-color: var(--second-color);
   display: flex;
   justify-content: space-between;
@@ -10,16 +11,14 @@ const SHeader = styled.header`
   h1 {
     color: var(--main-color);
     text-align: center;
-    font-size: 42px;
+    font-size: 3.5em;
     font-weight: bold;
-    margin-top: 22px;
   }
 
   .auth {
     height: 25px;
     border-radius: 15px;
     font-size: 16px;
-    /* margin: 10px 10px 0 10px; */
   }
 `;
 

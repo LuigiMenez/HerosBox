@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 70vw;
+  min-height: 68vh;
 
   h2 {
-    font-size: 38px;
+    font-size: 3em;
     text-align: center;
     font-weight: bold;
     color: var(--main-color);
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
   div {
     display: flex;
@@ -33,7 +34,7 @@ export const Game = styled.div`
   background-repeat: no-repeat;
   width: 25rem;
   height: 23vh;
-  border: solid 4px var(--main-color);
+  outline: solid 4px var(--main-color);
   border-radius: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -55,6 +56,5 @@ export const Game = styled.div`
     height: 20%;
     background-color: #1f1d359c;
     color: var(--second-color);
-    padding-top: 5px;
   }
 `;

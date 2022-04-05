@@ -8,12 +8,15 @@ const GlobalStyle = createGlobalStyle`
 }
 *{
   box-sizing: border-box;
-  width:100 vw ;
 }
   body {
     background: #d5d5d5;
-    
-  }
+  min-height: 100vh;
+  max-width: 100vw;
+}
+.home{
+  display: flex;
+ }   
 `;
 
 export default GlobalStyle;
