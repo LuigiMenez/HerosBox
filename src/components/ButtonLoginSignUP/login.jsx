@@ -4,6 +4,7 @@ import useModal from 'hooks/useModal';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Modal from '../Modal';
+import Sbutton from './style';
 
 export default function ButtonLogin() {
   const { isShowing: isLoginForm, toggle: toggleLogin } = useModal();
@@ -37,9 +38,9 @@ export default function ButtonLogin() {
   return (
     <>
       <div className="button">
-        <button type="button" className="logIn" onClick={toggleLogin}>
+        <Sbutton type="button" className="logIn" onClick={toggleLogin}>
           Connexion
-        </button>
+        </Sbutton>
       </div>
       <Modal isShowing={isLoginForm} hide={toggleLogin} title="Connexion">
         <form onSubmit={hSubmit}>
